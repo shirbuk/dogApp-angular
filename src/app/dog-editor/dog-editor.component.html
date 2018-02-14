@@ -1,0 +1,24 @@
+<h3>Add a new dog</h3>
+<h2>Dog: {{ dog.name }}</h2>
+<h2>Weight: {{ dog.weight }}</h2>
+<div>
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="dog.name" placeholder="Name" />
+  </label>
+  <label>
+    Weight:
+    <input type="text" [(ngModel)]="dog.weight" placeholder="Weight" />
+  </label>
+  <label>
+    Birthday:
+    <input type="date" [(ngModel)]="dog.birthday" />
+  </label>
+  <span *ngIf="dogWeight < 10" [ngClass]="{'warning' : dog.weight < 5, 'message': true }">{{dog.name}} is underweight
+  </span>
+</div>
+<button *ngIf="!dog.id" type="button" name="btnAddDog" (click)="addDog()" value="Add dog">Add dog</button>
+<div *ngIf="dog.id">
+  <button type="button" name="btnSubmitEdit" (click)="submitEdit()">Edit dog</button>
+  <button type="button" name="btnCancelEdit" (click)="cancelEdit()">Cancel edit</button>
+</div>

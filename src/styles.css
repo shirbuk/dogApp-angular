@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url(http://images.mentalfloss.com/sites/default/files/styles/insert_main_wide_image/public/iStock_000016920795_Small.jpg);
+    background-size: 100%;
+}
